@@ -142,5 +142,5 @@ def run_all():
 
 if __name__ == '__main__':
     run_all() # read data, evaluate sol1, evaluate sol2
-    #run_sol1() # read data, evaluate sol1
+    # run_sol1() # read data, evaluate sol1
     #run_data() # read data

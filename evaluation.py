@@ -3164,7 +3164,39 @@ def trans_old(raw_name, rop_name, con_name, inl_nsame,filename):
         p.con.read_from_phase_0(con_name)
         p.con.write(filename+".con")
         p.inl.write(filename+".inl",p.raw,p.rop)
-    
+
+
+def read_sol1(raw_name, rop_name, con_name, inl_name, sol1_name=None, sol2_name=None, summary_name=None, detail_name=None):
+    # start timer
+    start_time_all = time.time()
+
+    # read the data files
+    start_time = time.time()
+    p = data.Data()
+    p.raw.read(raw_name)
+    p.rop.read(rop_name)
+    p.con.read(con_name)
+    p.inl.read(inl_name)
+    time_elapsed = time.time() - start_time
+    print("read data time: %u" % time_elapsed)
+    print('done reading data')
+
+    # set up evaluation
+    e = Evaluation()
+    e.set_data(p)
+    e.set_params()
+
+    print('done setting evaluation data')
+
+    # base case solution evaluation
+    start_time = time.time()
+    s1 = Solution1()
+    s1.read(sol1_name, e.num_bus, e.num_gen)  # this is now fairly long ~ 0.17 second
+    e.set_solution1(s1)
+    print(e)
+    return e
+
+
 def run(raw_name, rop_name, con_name, inl_name, sol1_name=None, sol2_name=None, summary_name=None, detail_name=None):
 
     # start timer
@@ -3197,8 +3229,8 @@ def run(raw_name, rop_name, con_name, inl_name, sol1_name=None, sol2_name=None, 
     
     print('done reading data')
 
-    if sol1_name is None:
-        return True
+    # if sol1_name is None:
+    #     return True
 
     # set up evaluation
     e = Evaluation()
@@ -3222,7 +3254,8 @@ def run(raw_name, rop_name, con_name, inl_name, sol1_name=None, sol2_name=None, 
     print('done evaluating base case - solution 1')
 
     if sol2_name is None:
-        return True
+        # return True
+        return (e.infeas, e.penalty, e.cost, e.obj)
 
     # ctg solution evaluation - loop over ctg to save memory
     # get ctg structure in sol
