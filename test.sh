@@ -1,48 +1,49 @@
 #!/bin/sh
 
 ############################ single case ############################
-#case_dir='./examples/case2/'
-#case_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained2.jl/test/data/Network_02O-173/scenario_9/'
-case_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained.jl/test/data/Network_1/scenario_1/'
-raw=$case_dir'case.raw'
-rop=$case_dir'case.rop'
-con=$case_dir'case.con'
-inl=$case_dir'case.inl'
-sol1=$case_dir'sol1_test_approx.txt'
-sol2=$case_dir'sol2/sol2_approx.txt'
-summary=$case_dir'summary.csv'
-detail=$case_dir'detail_approx.csv'
-#sol1=$case_dir'solution1.txt'
-#sol2=$case_dir'sol2/sol2.txt'
+##case_dir='./examples/case2/'
+##case_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained2.jl/test/data/Network_02O-173/scenario_9/'
+#case_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained.jl/test/data/Network_1/scenario_1/'
+#raw=$case_dir'case.raw'
+#rop=$case_dir'case.rop'
+#con=$case_dir'case.con'
+#inl=$case_dir'case.inl'
+#sol1=$case_dir'sol1_test_approx.txt'
+#sol2=$case_dir'sol2/sol2_approx.txt'
 #summary=$case_dir'summary.csv'
-#detail=$case_dir'detail.csv'
-
-
-
-# run it
-python test.py "$raw" "$rop" "$con" "$inl" "$sol1" "$sol2" "$summary" "$detail"
+#detail=$case_dir'detail_approx.csv'
+##sol1=$case_dir'solution1.txt'
+##sol2=$case_dir'sol2/sol2.txt'
+##summary=$case_dir'summary.csv'
+##detail=$case_dir'detail.csv'
+#
+#
+#
+## run it
+#python test.py "$raw" "$rop" "$con" "$inl" "$sol1" "$sol2" "$summary" "$detail"
 
 
 
 ############################## evaluate all scenarios for a given network ################################
 #network_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained2.jl/test/data/Network_02O-173/'
 #network_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained2.jl/test/data/c2/'
-#for dir in $network_dir/*/;
-#
-#do
-#    case_dir=$network_dir$(basename -- $dir)/
-#    echo case_dir
-#    raw=$case_dir'case.raw'
-#    rop=$case_dir'case.rop'
-#    con=$case_dir'case.con'
-#    inl=$case_dir'case.inl'
-#    sol1=$case_dir'solution1_111.txt'
-#    sol2=$case_dir'solution2_v2.txt'
-#    summary=$case_dir'summary_v2.csv'
-#    detail=$case_dir'detail_v2.csv'
-#
-#    python approx_model_test.py "$raw" "$rop" "$con" "$inl" "$sol1" "$sol2" "$summary" "$detail"
-#done
+network_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained.jl/test/data/Network_1'
+for scenario in "$network_dir"/*/;
+
+do
+    echo $scenario
+    raw=$scenario'case.raw'
+    rop=$scenario'case.rop'
+    con=$scenario'case.con'
+    inl=$scenario'case.inl'
+
+    sol1=$scenario'solution1.txt'
+    sol2=$scenario'sol2/sol2.txt'
+    summary=$scenario'summary.csv'
+    detail=$scenario'detail/detail.csv'
+
+    python test.py "$raw" "$rop" "$con" "$inl" "$sol1" "$sol2" "$summary" "$detail"
+done
 
 
 
@@ -134,6 +135,3 @@ python test.py "$raw" "$rop" "$con" "$inl" "$sol1" "$sol2" "$summary" "$detail"
 ##    python $evaluation_dir"/test.py" "$raw" "$rop" "$con" "$inl" "$file1" "$file2" "$summary" "$detail"
 #  done
 #done
-
-# iterate all folders under network_dir folder
-for
