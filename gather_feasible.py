@@ -90,12 +90,21 @@ for scenario in ["scenario_15"]:
         sol1 = os.path.join(case_dir, scenario, "sol1", sol)
         mod = int(sol.split(".")[0].split("_")[1])
         var = int(sol.split(".")[0].split("_")[2])
-        result = evaluation.read_sol1(raw, rop, con, inl, sol1_name=sol1, sol2_name=None, summary_name=summary, detail_name=detail)
+        result, ctg = evaluation.read_sol1(raw, rop, con, inl, sol1_name=sol1)
         # mag_tmp.append(result.gen_pow_real[45])
-        mag["scenario"].append(scenario)
-        mag["mod"].append(mod)
-        mag["var"].append(var)
-        mag["value"].append(result.gen_pow_real[73])
+        # self.bus_volt_mag = solution1.bus_df.vm.values[bus_permutation]
+        # self.bus_volt_ang = solution1.bus_df.va.values[bus_permutation] * (math.pi / 180.0)
+        # self.bus_swsh_adm_imag = solution1.bus_df.b.values[bus_permutation] / self.base_mva
+        # self.gen_pow_real = solution1.gen_df.pg.values[gen_permutation] / self.base_mva
+        # self.gen_pow_imag = solution1.gen_df.qg.values[gen_permutation] / self.base_mva
+        # self.gen_bus_volt_mag = self.bus_volt_mag[self.gen_bus]
+        print(len(result.bus_volt_mag))
+        print(len(result.bus_volt_ang))
+        print(len(result.bus_swsh_adm_imag))
+        print(len(result.gen_pow_real))
+        print(len(result.gen_pow_imag))
+        print(len(result.gen_bus_volt_mag))
+
         c += 1
     # mag.append(mag_tmp)
 

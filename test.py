@@ -2,12 +2,12 @@
 syntax:
 
 from a command prompt:
-python test.py raw rop con inl sol1 sol2 summary detail
+python approx_model_test.py raw rop con inl sol1 sol2 summary detail
 
 from a Python interpreter:
 import sys
 sys.argv = [raw, rop, con, inl, sol1, sol2, summary, detail]
-execfile("test.py")
+execfile("approx_model_test.py")
 '''
 
 import argparse

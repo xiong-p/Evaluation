@@ -1404,8 +1404,8 @@ class Evaluation:
                 continue
             #if self.gen_pow_real[k] < pl_x[0]: # do not check these
             #    continue
-            #if self.gen_pow_real[k] > pl_x[num_pl - 1]:
             #    continue
+            #if self.gen_pow_real[k] > pl_x[num_pl - 1]:
             y_value = 0.0
             slope = 0.0
             x_change = 0.0
@@ -3166,10 +3166,7 @@ def trans_old(raw_name, rop_name, con_name, inl_nsame,filename):
         p.inl.write(filename+".inl",p.raw,p.rop)
 
 
-def read_sol1(raw_name, rop_name, con_name, inl_name, sol1_name=None, sol2_name=None, summary_name=None, detail_name=None):
-    # start timer
-    start_time_all = time.time()
-
+def read_sol1(raw_name, rop_name, con_name, inl_name, sol1_name=None):
     # read the data files
     start_time = time.time()
     p = data.Data()

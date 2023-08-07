@@ -1,6 +1,6 @@
 '''
 Arun, please copy or revise this file as you need
-Jesse will continue to use test.py and test.sh for further development of the evaluation script
+Jesse will continue to use approx_model_test.py and test.sh for further development of the evaluation script
 '''
 
 import argparse

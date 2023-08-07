@@ -3,18 +3,24 @@
 ############################ single case ############################
 #case_dir='./examples/case2/'
 #case_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained2.jl/test/data/Network_02O-173/scenario_9/'
-##case_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained2.jl/test/data/c1/scenario_1/'
-#raw=$case_dir'case.raw'
-#rop=$case_dir'case.rop'
-#con=$case_dir'case.con'
-#inl=$case_dir'case.inl'
-#sol1=$case_dir'sol1/sol1_1_3.txt'
-#sol2=$case_dir'sol2/sol2_1_3.txt'
+case_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained.jl/test/data/Network_1/scenario_1/'
+raw=$case_dir'case.raw'
+rop=$case_dir'case.rop'
+con=$case_dir'case.con'
+inl=$case_dir'case.inl'
+sol1=$case_dir'sol1_test_approx.txt'
+sol2=$case_dir'sol2/sol2_approx.txt'
+summary=$case_dir'summary.csv'
+detail=$case_dir'detail_approx.csv'
+#sol1=$case_dir'solution1.txt'
+#sol2=$case_dir'sol2/sol2.txt'
 #summary=$case_dir'summary.csv'
-#detail=$case_dir'detail_1_3.csv'
-#
-## run it
-#python test.py "$raw" "$rop" "$con" "$inl" "$sol1" "$sol2" "$summary" "$detail"
+#detail=$case_dir'detail.csv'
+
+
+
+# run it
+python test.py "$raw" "$rop" "$con" "$inl" "$sol1" "$sol2" "$summary" "$detail"
 
 
 
@@ -35,7 +41,7 @@
 #    summary=$case_dir'summary_v2.csv'
 #    detail=$case_dir'detail_v2.csv'
 #
-#    python test.py "$raw" "$rop" "$con" "$inl" "$sol1" "$sol2" "$summary" "$detail"
+#    python approx_model_test.py "$raw" "$rop" "$con" "$inl" "$sol1" "$sol2" "$summary" "$detail"
 #done
 
 
@@ -69,56 +75,65 @@
 
 
 ############################# evaluate all sol2 and sol1 and generate detail.csv files in the detail folder ###########
-network_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained2.jl/test/data/Network_02O-173/'
-# get the current working directory into evaluation_dir
-evaluation_dir=$(pwd)
-
-cd $network_dir
-for scenario in */;
-
-do
-  ## for test: if scenario is not "scenario_9" continue
-  if [ $scenario != "scenario_15/" ]; then
-    continue
-  fi
-
+##network_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained2.jl/test/data/Network_02O-173/'
+#network_dir='/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained.jl/test/data/Network_1/'
+## get the current working directory into evaluation_dir
+#evaluation_dir=$(pwd)
+#
+#cd $network_dir
+#for scenario in */;
+#
+#do
+#  ## for test: if scenario is not "scenario_9" continue
+##  if [ $scenario != "scenario_11/" ]; then
+##    continue
+##  fi
+#
 #  echo $scenario
-  cd $network_dir$scenario
-  if [ ! -d "detail" ]; then
-    mkdir detail
-  fi
-  if [ ! -d "summary" ]; then
-    mkdir summary
-  fi
-  raw=$network_dir$scenario'case.raw'
-  rop=$network_dir$scenario'case.rop'
-  con=$network_dir$scenario'case.con'
-  inl=$network_dir$scenario'case.inl'
-  # for all files in sol1 folder
-  for file1 in sol1/*;
-  # get the last part of the file name
-  do
-#    echo $file1
-    # get the last part of the file name
-    file1_name=$(basename -- $file1)
-#    echo $file1_name
-    # get the first part of the file name
-    file1_name=${file1_name%.*}
-#    echo $file1_name
-    # get the part of file name without sol1_
-    code=${file1_name#*_}
-#    echo $code
-    # get the file name of sol2
-    file2="sol2/sol2_$code.txt"
-#    echo $file2
-    # get the file name of detail
-    detail="detail/detail_$code.csv"
-#    echo $detail
-    # get the file name of summary
-    summary="summary/summary_$code.csv"
-#    echo $summary
-    # run the test.py
+#  cd $network_dir$scenario
+#  if [ ! -d "detail" ]; then
+#    mkdir detail
+#  fi
+#  if [ ! -d "summary" ]; then
+#    mkdir summary
+#  fi
+#  raw=$network_dir$scenario'case.raw'
+#  rop=$network_dir$scenario'case.rop'
+#  con=$network_dir$scenario'case.con'
+#  inl=$network_dir$scenario'case.inl'
+#  # for all files in sol1 folder
+#  for file1 in sol1/*;
+#  # get the last part of the file name
+#  do
+##    echo $file1
+#    # get the last part of the file name
+#    file1_name=$(basename -- $file1)
+##    echo $file1_name
+#    # get the first part of the file name
+#    file1_name=${file1_name%.*}
+##    echo $file1_name
+#    # get the part of file name without sol1_
+#    code=${file1_name#*_}
+##    echo $code
+#    # get the file name of sol2
+#    file2="sol2/sol2_$code.txt"
+##    echo $file2
+#    # get the file name of detail
+#    detail="detail/detail_$code.csv"
+##    echo $detail
+#    # get the file name of summary
+#    summary="summary/summary_$code.csv"
+##    echo $summary
+#    # run the approx_model_test.py
+#
+#    if [ ! -f "$detail" ]; then
+##      continue
+#      python $evaluation_dir"/test.py" "$raw" "$rop" "$con" "$inl" "$file1" "$file2" "$summary" "$detail"
+#    fi
+#
+##    python $evaluation_dir"/test.py" "$raw" "$rop" "$con" "$inl" "$file1" "$file2" "$summary" "$detail"
+#  done
+#done
 
-    python $evaluation_dir"/test.py" "$raw" "$rop" "$con" "$inl" "$file1" "$file2" "$summary" "$detail"
-  done
-done
+# iterate all folders under network_dir folder
+for
