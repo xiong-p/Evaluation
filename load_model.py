@@ -9,7 +9,7 @@ DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 learning_rate = 0.0005
 batch_size = 64
 NUM_HIDDEN_LIST = [16, 64] #[128, 64]
-log_dir = "/home/jxxiong/A-xjx/Evaluation/model/weights/no_regularization/"
+log_dir = "./model/weights/no_regularization/"
 print(f'log_dir: {log_dir}')
 print("using device: ", DEVICE)
 input_dim = 1502 # 2840, 502
