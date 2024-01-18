@@ -4,58 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9365b1ca-4c05-431d-8f78-f9818f3e3f6d" name="Changes" comment="add result folder">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Evaluation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Evaluation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9365b1ca-4c05-431d-8f78-f9818f3e3f6d" name="Changes" comment="update the README.md and remove unused files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/approx_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/check_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/check_data.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/convert_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/convert_data.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/copyback.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/copyforward.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mag.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/load_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/process.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_16_l1_41_grad_51_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_32_l1_41_grad_31_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_32_l1_51_grad_541_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_8_32_l1_0_grad_41_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_8_64_8_l1_0_grad_41_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_8_l1_41_grad_41.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_16_l1_41_grad_51_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_32_l1_41_grad_31_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_32_l1_51_grad_541_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_128_8_l1_41_grad_41_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_32_8_l1_51_grad_41_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_32_l1_0_grad_41_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_64_8_l1_0_grad_41_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_l1_41_grad_41_best.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_l1_41_grad_41_prune.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_l1_41_grad_41_pruned.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/visualization.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrub_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrub_data.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/test.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize_detail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/write_offline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/write_offline.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/approx_model_test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +224,7 @@
       <workItem from="1692093383229" duration="7626000" />
       <workItem from="1692156441544" duration="126000" />
       <workItem from="1692156959504" duration="30316000" />
-      <workItem from="1705557292200" duration="10066000" />
+      <workItem from="1705557292200" duration="10258000" />
     </task>
     <task id="LOCAL-00001" summary="initialize the result">
       <created>1692264612949</created>
@@ -317,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705565723443</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update the README.md and remove unused files">
+      <created>1705567701111</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705567701111</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +299,8 @@
     <MESSAGE value="remove redundant codes in src" />
     <MESSAGE value="remove redundant codes in load_model.py" />
     <MESSAGE value="add result folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="add result folder" />
+    <MESSAGE value="update the README.md and remove unused files" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the README.md and remove unused files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
