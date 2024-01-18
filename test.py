@@ -11,11 +11,7 @@ execfile("approx_model_test.py")
 '''
 
 import argparse
-#import evaluation1 as evaluation
-#import evaluation2 as evaluation # functioning code, with timing prototypes of numpy/scipy method
-#import evaluation3 as evaluation # developing numpy/scipy method
 import evaluation # current code
-import csv
 import os
 
 def run_data():

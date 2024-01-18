@@ -4,11 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9365b1ca-4c05-431d-8f78-f9818f3e3f6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/visualize_detail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation.py" afterDir="false" />
+    <list default="true" id="9365b1ca-4c05-431d-8f78-f9818f3e3f6d" name="Changes" comment="add result folder">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Evaluation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Evaluation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/approx_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_data.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/convert_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/convert_data.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/copyback.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/copyforward.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foo.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mag.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/load_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_16_l1_41_grad_51_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_32_l1_41_grad_31_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_32_l1_51_grad_541_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_8_32_l1_0_grad_41_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_8_64_8_l1_0_grad_41_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/bak/result_hidden_8_l1_41_grad_41.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_16_l1_41_grad_51_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_32_l1_41_grad_31_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_32_l1_51_grad_541_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_128_8_l1_41_grad_41_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_32_8_l1_51_grad_41_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_32_l1_0_grad_41_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_64_8_l1_0_grad_41_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_l1_41_grad_41_best.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_l1_41_grad_41_prune.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result_hidden_8_l1_41_grad_41_pruned.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/visualization.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrub_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrub_data.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/test.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visual.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualize_detail.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/write_offline.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/write_offline.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,34 +66,69 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b3b33268-dea5-4e77-a350-9cfc8b658a99" />
+        <option name="url" value="https://github.com/xiong-p/Evaluation.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2R36afoxL8LsvMnLCdPnAwoFI9C" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;PyScientificConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "last_opened_file_path": "/Users/xiongjinxin/A-xjx/scopf/Evaluation",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python.gather_feasible">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/result/bak" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/model" />
+      <recent name="$PROJECT_DIR$/model/best" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.generate_result">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Evaluation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -69,7 +151,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gather_feasible" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="generate_result" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Evaluation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -77,12 +159,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gather_feasible.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/generate_result.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -91,7 +173,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="load_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Evaluation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,12 +181,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/load_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,48 +195,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="visual" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Evaluation" />
+    <configuration name="test-MyJulia-benchmark.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/test-MyJulia-benchmark.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/sh" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visual.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
       <method v="2" />
     </configuration>
-    <configuration name="visualize_detail" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Evaluation" />
+    <configuration name="test_all.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/test_all.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/sh" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_detail.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="test.sh" type="ShConfigurationType" temporary="true">
@@ -174,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.gather_feasible" />
-        <item itemvalue="Python.visualize_detail" />
         <item itemvalue="Shell Script.test.sh" />
-        <item itemvalue="Python.visual" />
-        <item itemvalue="Python.run" />
+        <item itemvalue="Python.generate_result" />
+        <item itemvalue="Shell Script.test_all.sh" />
+        <item itemvalue="Python.load_model" />
+        <item itemvalue="Shell Script.test-MyJulia-benchmark.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -200,20 +268,84 @@
       <workItem from="1687591995241" duration="6806000" />
       <workItem from="1688459702130" duration="25803000" />
       <workItem from="1688781969479" duration="71000" />
+      <workItem from="1691402777577" duration="11178000" />
+      <workItem from="1692078347708" duration="5619000" />
+      <workItem from="1692093383229" duration="7626000" />
+      <workItem from="1692156441544" duration="126000" />
+      <workItem from="1692156959504" duration="30316000" />
+      <workItem from="1705557292200" duration="10066000" />
     </task>
+    <task id="LOCAL-00001" summary="initialize the result">
+      <created>1692264612949</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692264612949</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add 8_128_8">
+      <created>1692265603056</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692265603056</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit">
+      <created>1705558153080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705558153080</updated>
+    </task>
+    <task id="LOCAL-00004" summary="remove redundant codes in src">
+      <created>1705563135973</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705563135973</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remove redundant codes in load_model.py">
+      <created>1705563371295</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705563371295</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add result folder">
+      <created>1705565723443</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705565723443</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initialize the result" />
+    <MESSAGE value="add 8_128_8" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="remove redundant codes in src" />
+    <MESSAGE value="remove redundant codes in load_model.py" />
+    <MESSAGE value="add result folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="add result folder" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/visualize_detail.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gather_feasible.py</url>
           <line>62</line>
@@ -224,11 +356,17 @@
           <line>92</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/evaluation.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Evaluation$run.coverage" NAME="run Coverage Results" MODIFIED="1686466571134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Evaluation$generate_result.coverage" NAME="generate_result Coverage Results" MODIFIED="1692086309670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Evaluation$gather_feasible.coverage" NAME="gather_feasible Coverage Results" MODIFIED="1688717656853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
