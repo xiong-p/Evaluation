@@ -11,13 +11,14 @@ from torch import nn
 from torch.utils import tensorboard
 from torch.utils.data import DataLoader, Dataset
 import torch.nn.utils.prune as prune
+import numpy as np
 
 torch.manual_seed(42)
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
-SUMMARY_INTERVAL = 10
-SAVE_INTERVAL = 10
-PRINT_INTERVAL = 10
-VAL_INTERVAL = PRINT_INTERVAL * 10
+SUMMARY_INTERVAL = 100
+SAVE_INTERVAL = 50
+PRINT_INTERVAL = 100
+VAL_INTERVAL = 50
 
 class ThresholdPruning(prune.BasePruningMethod):
     PRUNING_TYPE = "unstructured"
@@ -34,10 +35,12 @@ class ApproxDataset(Dataset):
     def __init__(self, file_path):
         # convert into PyTorch tensors and remember them
         df = pd.read_csv(file_path)
-        # if "train" in file_path:
-        #     df = df.iloc[:3500]
+        if "train" in file_path:
+            df = df.iloc[:5000]
+        if "val" in file_path:
+            df = df.iloc[:1500]
         self.X = df[df.columns[:-1]].values
-        self.y = df[['stage2_pen']].values / 1e5
+        self.y = np.log(df[['stage2_pen']].values)
         self.X = torch.tensor(self.X, dtype=torch.float32)
         self.y = torch.tensor(self.y, dtype=torch.float32)
 
@@ -62,7 +65,7 @@ class ApproxNetwork(nn.Module):
             prev_hidden = hidden
 
         dic.append((f'linear{len(self.num_hidden_list)}', nn.Linear(prev_hidden, 1, bias=True)))
-        dic.append((f'activation{len(self.num_hidden_list)}', nn.Softplus()))
+        # dic.append((f'activation{len(self.num_hidden_list)}', nn.Softplus()))
         self.net = nn.Sequential(OrderedDict(dic))
 
         for name, param in self.net.named_parameters():
@@ -137,10 +140,11 @@ class ApproxNet:
             if epoch % PRINT_INTERVAL == 0:
                 print(
                     f'Epoch {epoch}: '
-                    f'loss: {np.mean(losses):.3f} '
+                    f'loss: {np.mean(losses):.6f} '
                 )
                 writer.add_scalar('loss/train', np.mean(losses), epoch)
-                writer.add_scalar('grad/train', np.mean(grads), epoch)
+                if len(grads) > 0:
+                    writer.add_scalar('grad/train', np.mean(grads), epoch)
 
             if epoch % VAL_INTERVAL == 0 and epoch > 0:
                 with torch.no_grad():
@@ -150,7 +154,7 @@ class ApproxNet:
                     loss_val = np.mean(losses_val)
                 print(
                     f'Validation: '
-                    f'loss: {loss_val:.3f} '
+                    f'loss: {loss_val:.6f} '
                 )
                 writer.add_scalar('loss/val', loss_val, epoch)
                 if loss_val < best_val:
@@ -270,8 +274,12 @@ def main(args):
 
     writer = tensorboard.SummaryWriter(log_dir=log_dir)
 
-    train_file = "./data/stage2_pen_train.csv"
-    val_file = "./data/stage2_pen_val.csv"
+    # train_file = "./data/stage2_pen_train.csv"
+    # val_file = "./data/stage2_pen_val.csv"
+    # test_file = "./data/stage2_pen_test.csv"
+
+    train_file = "./data/stage2_train.csv"
+    val_file = "./data/stage2_val.csv"
     test_file = "./data/stage2_pen_test.csv"
 
     if not args.test:
@@ -299,21 +307,20 @@ if __name__ == "__main__":
     Arguments = namedtuple("Arguments", ["log_dir", "learning_rate", "batch_size", "epoch", "test", "checkpoint_step", 
                                          "hidden", "l1_lambda", "l2_lambda", "grad_pen"])
 
-    log_dir = "log/"
-    learning_rate = 0.0005
-    batch_size = 128
-    epoch = 3000
+    # log_dir = "log_final_three/"
+    log_dir = "log3/"
+    learning_rate = 0.0003
+    batch_size = 64
+    epoch = 4000
     test = False
     checkpoint_step = -1
 
-    hidden_list = [[8, 32], [8, 64], [16, 32], [16, 64], [32, 64]]
+    hidden_list = [[16, 64]]
 
-    # layer1 = [8, 16, 32]
-    # layer2 = [0, 16, 32, 64, 128]
-    # hidden_list = [[layer1[i], layer2[j]] for i in range(len(layer1)) for j in range(i+1, len(layer2))]
-    l1_lambda_list = [0.0, 1e-3, 1e-4, 1e-5]
-    l2_lambda_list = [0.0]
-    grad_pen_list = [1e-2, 1e-3, 1e-4, 0.005, 0.0005]
+    l1_lambda_list = [0.0]
+    # l1_lambda_list = [0.0]
+    l2_lambda_list = [1e-2, 1e-3, 1e-4, 1e-5, 1e-6]
+    grad_pen_list = [0.0]
 
     for hidden in hidden_list:
         for grad_pen in grad_pen_list:
