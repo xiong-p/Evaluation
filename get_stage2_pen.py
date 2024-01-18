@@ -97,34 +97,38 @@ def update_df_pen(df, scenario, code=""):
     return df
 
 ###################### get only penalty ########################
-df = None
-for s in range(501, 503):
-    df = update_df_pen(df, "scenario_" + str(s))
-df.to_csv("/home/jxxiong/A-xjx/Evaluation/data/stage2_tmp.csv", index=False)
+# df = None
+# for s in range(501, 502):
+#     df = update_df_pen(df, "scenario_" + str(s))
+# df.to_csv("/home/jxxiong/A-xjx/Evaluation/data/stage2_tmp.csv", index=False)
 
 
 ###################### genearte data ############################
-# df = None
-# for s in range(1, 200):
-# # for s in range(10, 10):
-#     for i in range(1, 11):
-#         for j in range(1, 6):
-#             code = str(i) + "_" + str(j)
-#             df = update_df(df, "scenario_" + str(s), code)
-#
-# df.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_199.csv", index=False)
-#
-# # write the inactive columns to a file
-# cols = df.columns.tolist()
-# inactive_cols = []
-# for c in cols:
-#     if np.sum(df[c].values) == 0:
-#         inactive_cols.append(c)
-# with open("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/inactive_cols.txt", "w") as f:
-#     for c in inactive_cols:
-#         f.write(c + "\n")
-# df.drop(columns=inactive_cols, inplace=True)
-# df.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_active.csv", index=False)
+df = None
+for s in range(1, 9):
+# for s in range(10, 10):
+    for i in range(11, 14):
+        for j in range(1, 6):
+            code = str(i) + "_" + str(j)
+            df = update_df(df, "scenario_" + str(s), code)
+    i = 14
+    for j in range(1, 3):
+        code = str(i) + "_" + str(j)
+        df = update_df(df, "scenario_" + str(s), code)
+
+# df.to_csv("/home/jxxiong/A-xjx/Evaluation/data/stage2_tmp.csv", index=False)
+
+# write the inactive columns to a file
+cols = df.columns.tolist()
+inactive_cols = []
+for c in cols:
+    if np.sum(df[c].values) == 0:
+        inactive_cols.append(c)
+with open("/home/jxxiong/A-xjx/Evaluation/data/inactive_cols.txt", "w") as f:
+    for c in inactive_cols:
+        f.write(c + "\n")
+df.drop(columns=inactive_cols, inplace=True)
+df.to_csv("/home/jxxiong/A-xjx/Evaluation/data/stage2_tmp2.csv", index=False)
 # df_train = df.iloc[:184*50]
 # df_train.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_train.csv", index=False)
 # df_val = df.iloc[184*50: 194*50]
