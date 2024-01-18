@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9365b1ca-4c05-431d-8f78-f9818f3e3f6d" name="Changes" comment="update the README.md and remove unused files">
+    <list default="true" id="9365b1ca-4c05-431d-8f78-f9818f3e3f6d" name="Changes" comment="add approx_model.py for training the neural network">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/approx_model_test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +71,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/result/bak" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -79,7 +79,7 @@
       <recent name="$PROJECT_DIR$/model/best" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.generate_result">
+  <component name="RunManager" selected="Python.load_model (1)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Evaluation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,6 +94,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="approx_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Evaluation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/approx_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,41 +143,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="load_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="load_model (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Evaluation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/load_model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/load_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test-MyJulia-benchmark.sh" type="ShConfigurationType" temporary="true">
-      <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/test-MyJulia-benchmark.sh" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="/bin/sh" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="true" />
-      <envs />
       <method v="2" />
     </configuration>
     <configuration name="test_all.sh" type="ShConfigurationType" temporary="true">
@@ -193,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.load_model (1)" />
+        <item itemvalue="Python.approx_model_test_cv" />
         <item itemvalue="Shell Script.test.sh" />
         <item itemvalue="Python.generate_result" />
         <item itemvalue="Shell Script.test_all.sh" />
-        <item itemvalue="Python.load_model" />
-        <item itemvalue="Shell Script.test-MyJulia-benchmark.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +225,7 @@
       <workItem from="1692093383229" duration="7626000" />
       <workItem from="1692156441544" duration="126000" />
       <workItem from="1692156959504" duration="30316000" />
-      <workItem from="1705557292200" duration="10258000" />
+      <workItem from="1705557292200" duration="12674000" />
     </task>
     <task id="LOCAL-00001" summary="initialize the result">
       <created>1692264612949</created>
@@ -275,7 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1705567701111</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="remove the approx_model_test.py">
+      <created>1705567891519</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705567891519</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add approx_model.py for training the neural network">
+      <created>1705575538658</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705575538658</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +315,9 @@
     <MESSAGE value="remove redundant codes in load_model.py" />
     <MESSAGE value="add result folder" />
     <MESSAGE value="update the README.md and remove unused files" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the README.md and remove unused files" />
+    <MESSAGE value="remove the approx_model_test.py" />
+    <MESSAGE value="add approx_model.py for training the neural network" />
+    <option name="LAST_COMMIT_MESSAGE" value="add approx_model.py for training the neural network" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
