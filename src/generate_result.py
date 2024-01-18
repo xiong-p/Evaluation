@@ -4,7 +4,6 @@ import pandas as pd
 import os
 
 network_dir = '/home/jxxiong/A-xjx/Network_1/'
-# PMSC_DIR = "/Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained.jl/"
 EVALUATION_RESULT_DIR = "/home/jxxiong/A-xjx/Evaluation/result/"
 PMSC_DIR = "/home/jxxiong/A-xjx/PowerModelsSecurityConstrained.jl/src/scripts/c1/solve_time_result/"
 # PMSC_DIR = "/home/jxxiong/A-xjx/PowerModelsSecurityConstrained.jl/src/scripts/c1/benchmark_result/"

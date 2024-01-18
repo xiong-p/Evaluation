@@ -96,102 +96,37 @@ def update_df_pen(df, scenario, code=""):
 
     return df
 
-###################### get only penalty ########################
-df = None
-for s in range(501, 503):
-    df = update_df_pen(df, "scenario_" + str(s))
-df.to_csv("/home/jxxiong/A-xjx/Evaluation/data/stage2_tmp.csv", index=False)
-
-
 ###################### genearte data ############################
-# df = None
-# for s in range(1, 200):
-# # for s in range(10, 10):
-#     for i in range(1, 11):
-#         for j in range(1, 6):
-#             code = str(i) + "_" + str(j)
-#             df = update_df(df, "scenario_" + str(s), code)
-#
-# df.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_199.csv", index=False)
-#
-# # write the inactive columns to a file
-# cols = df.columns.tolist()
-# inactive_cols = []
-# for c in cols:
-#     if np.sum(df[c].values) == 0:
-#         inactive_cols.append(c)
-# with open("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/inactive_cols.txt", "w") as f:
-#     for c in inactive_cols:
-#         f.write(c + "\n")
-# df.drop(columns=inactive_cols, inplace=True)
-# df.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_active.csv", index=False)
-# df_train = df.iloc[:184*50]
-# df_train.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_train.csv", index=False)
-# df_val = df.iloc[184*50: 194*50]
-# df_val.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_val.csv", index=False)
-# df_test = df.iloc[194*50:]
-# df_test.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_test.csv", index=False)
-#
-# bus_cols = []
-# for c in cols:
-#     if "va" in c or "vm" in c:
-#         bus_cols.append(c)
-# df_train = df_train.drop(columns=bus_cols)
-# df_val = df_val.drop(columns=bus_cols)
-# df_test = df_test.drop(columns=bus_cols)
-# df_train.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_train_small.csv", index=False)
-# df_val.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_val_small.csv", index=False)
-# df_test.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_test_small.csv", index=False)
-################################################################
-# df = pd.read_csv("../data/stage2_pen_active.csv")
-# df = df[df['stage2_pen'] > 0]
-# train_pct = 0.9
-# val_pct = 0.05
-# test_pct = 0.05
-# num_samples = len(df)
-# df_train = df.iloc[:int(train_pct * num_samples)]
-# df_train.to_csv("../data/stage2_pen_train.csv", index=False)
-# df_val = df.iloc[int(train_pct * num_samples): int((train_pct + val_pct) * num_samples)]
-# df_val.to_csv("../data/stage2_pen_val.csv", index=False)
-# df_test = df.iloc[int((train_pct + val_pct) * num_samples):]
-# df_test.to_csv("../data/stage2_pen_test.csv", index=False)
+df = None
+for s in range(1, 200):
+# for s in range(10, 10):
+    for i in range(1, 11):
+        for j in range(1, 6):
+            code = str(i) + "_" + str(j)
+            df = update_df(df, "scenario_" + str(s), code)
 
-###################### evaluate generated solution #############
-# read in the inactive columns
-# with open("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/inactive_cols.txt", "r") as f:
-#     inactive_cols = f.readlines()
-# inactive_cols = [c.strip() for c in inactive_cols]
+df.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_199.csv", index=False)
 
-# with open("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/cols_small.txt", "r") as f:
-#     small_cols = f.readlines()
-# small_cols = [c.strip() for c in small_cols]
+# write the inactive columns to a file
+cols = df.columns.tolist()
+inactive_cols = []
+for c in cols:
+    if np.sum(df[c].values) == 0:
+        inactive_cols.append(c)
+with open("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/inactive_cols.txt", "w") as f:
+    for c in inactive_cols:
+        f.write(c + "\n")
+df.drop(columns=inactive_cols, inplace=True)
+df.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_active.csv", index=False)
+df_train = df.iloc[:184*50]
+df_train.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_train.csv", index=False)
+df_val = df.iloc[184*50: 194*50]
+df_val.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_val.csv", index=False)
+df_test = df.iloc[194*50:]
+df_test.to_csv("/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/data/stage2_pen_test.csv", index=False)
 
-# scenario = "scenario_12"
-# code = "test_approx"
-# stage1 = get_stage1_sol(scenario, code, sol1_dir="sol1_")
-# load = get_load_data(scenario)
-# load.update(stage1)
-# # load the NN
-# from approx_model import ApproxNet
-# import torch
-# DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
-# learning_rate = 0.0001
-# batch_size = 128
-# # NUM_HIDDEN_LIST = [512, 128, 16]
-# NUM_HIDDEN_LIST = [8, 64, 8]
-#
-# log_dir = "/Users/xiongjinxin/A-xjx/SRIBD/Evaluation/model/weights/"
-# print(f'log_dir: {log_dir}')
-# print("using device: ", DEVICE)
-# # input_dim = 1502
-# input_dim = 502
-# approx_net = ApproxNet(learning_rate, log_dir, input_dim, NUM_HIDDEN_LIST)
-# approx_net.load(0)
-# df = pd.DataFrame(load, index=[0])
-# df.drop(columns=inactive_cols, inplace=True)
-# # df = df[small_cols]
-# x = df.values
-# x = torch.tensor(x, dtype=torch.float32).to(DEVICE)
-# approx_net._network.eval()
-# y = approx_net._network(x)*1e5
-# print(y)
+###################### get only penalty ########################
+df2 = None
+for s in range(501, 503):
+    df2 = update_df_pen(df, "scenario_" + str(s))
+df2.to_csv("/home/jxxiong/A-xjx/Evaluation/data/stage2_tmp.csv", index=False)

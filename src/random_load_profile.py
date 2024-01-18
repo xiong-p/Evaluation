@@ -79,10 +79,10 @@ def read_from_rows(rows, lines, case_name):
         ql = float(row[6])
 
         # random load profile, by a factor unifromly sampled from [0.9, 1.1]
-        # pl = pl * random.uniform(0.9, 1.1)
-        # ql = ql * random.uniform(0.9, 1.1)
-        pl = pl * random.uniform(0.7, 1.3)
-        ql = ql * random.uniform(0.7, 1.3)
+        pl = pl * random.uniform(0.9, 1.1)
+        ql = ql * random.uniform(0.9, 1.1)
+        # pl = pl * random.uniform(0.7, 1.3)
+        # ql = ql * random.uniform(0.7, 1.3)
 
         line = lines[row_num].split(",")
         line[5] = str(pl)

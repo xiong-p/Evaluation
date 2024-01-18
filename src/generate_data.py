@@ -3,7 +3,6 @@ import random_load_profile
 
 count = 50
 network_dir = '/home/jxxiong/A-xjx/Network_1/'
-# network_dir = '/home/jxxiong/A-xjx/Network_03R-10/'
 os.chdir(network_dir)
 
 
@@ -31,13 +30,13 @@ for i in range(start_id+1, start_id+1+count):
     case_raw_orig = os.path.join(scenario_dir, 'case_orig.raw')
     random_load_profile.main(case_raw_orig, case_raw)
 
-    # # call the julia code to generate the first stage solutions
-    # os.system('julia --project=/home/jxxiong/A-xjx/PowerModelsSecurityConstrained.jl /home/jxxiong/A-xjx/PowerModelsSecurityConstrained.jl/src/scripts/c1'
-    #           '/goc_c1_huristic_cli.jl --scenario ' + scenario + " --file " + "inputfiles.ini")
+    # call the julia code to generate the first stage solutions
+    os.system('julia --project=/home/jxxiong/A-xjx/PowerModelsSecurityConstrained.jl /home/jxxiong/A-xjx/PowerModelsSecurityConstrained.jl/src/scripts/c1'
+              '/goc_c1_huristic_cli.jl --scenario ' + scenario + " --file " + "inputfiles.ini")
 
-    # # call the julia code to generate other feasible solutions for the first-stage, and calculate the second-stage
-    # os.system('julia /Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained.jl/src/scripts/c1'
-    #           '/generate_stage1_feasible.jl --scenario ' + scenario)
+    # call the julia code to generate other feasible solutions for the first-stage, and calculate the second-stage
+    os.system('julia /Users/xiongjinxin/A-xjx/SRIBD/PowerModelsSecurityConstrained.jl/src/scripts/c1'
+              '/generate_stage1_feasible.jl --scenario ' + scenario)
 
 
 

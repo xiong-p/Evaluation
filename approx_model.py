@@ -21,24 +21,6 @@ NUM_LAYERS = 4
 NUM_HIDDEN_LIST = [8, 16, 32, 8]
 assert len(NUM_HIDDEN_LIST) == NUM_LAYERS
 
-
-# class ApproxNetwork(nn.Module):
-#     def __init__(self, input_dim, num_hidden_list):
-#         super(ApproxNetwork, self).__init__()
-#         self.num_hidden_list = num_hidden_list
-#         prev_hidden = input_dim
-#         dic = []
-#         for i, hidden in enumerate(self.num_hidden_list):
-#             dic.append((f'linear{i}', nn.Linear(prev_hidden, hidden, bias=True)))
-#             dic.append((f'activation{i}', nn.GELU()))
-#             prev_hidden = hidden
-#
-#         dic.append((f'linear{len(self.num_hidden_list)}', nn.Linear(prev_hidden, 1, bias=True)))
-#         self.net = nn.Sequential(OrderedDict(dic))
-#         self.to(DEVICE)
-#
-#     def forward(self, x):
-#         return self.net(x)
 class ApproxNetwork(nn.Module):
     def __init__(self, input_dim, num_hidden_list):
         super(ApproxNetwork, self).__init__()
