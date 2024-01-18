@@ -5,3 +5,4 @@ examples/
 model/
 result_bak/
 log/
+result/*.csv
